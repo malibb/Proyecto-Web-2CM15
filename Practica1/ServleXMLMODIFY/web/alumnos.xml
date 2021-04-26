@@ -1,0 +1,13 @@
+<alumnos atributo="valor">
+	<alumno id="1">
+		<nombre>RUBEN</nombre>
+		<apellido>PEREDO</apellido>
+	</alumno>
+	<alumno id="2">
+		<nombre>ROBERTO</nombre>
+		<apellido>PEREZ</apellido>
+	</alumno>
+        <grupo>
+            <materia>INGLES</materia>
+        </grupo>
+</alumnos>
