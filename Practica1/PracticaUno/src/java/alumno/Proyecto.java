@@ -50,9 +50,16 @@ public class Proyecto extends HttpServlet {
 		for (int i = 0; i < list.size(); i++) 
                 {
                     out.println("<tr>");
-		   Element node = (Element) list.get(i);
-		   out.println("<td>" +node.getChildText("TITULO")+"<td />");
-		   out.println("<td> LEER PREGUNTA | MODIFICAR PREGUNTA | ELIMINAR PREGUNTA<td />");    
+		   Element preguntaNode = (Element) list.get(i);
+                   //Obteniendo el valor de las opciones
+                   List ops = preguntaNode.getChildren("DRAGS");
+                   String opcionesDRAGS = "";
+                   for(int j = 0; j< ops.size() ; j++){
+                       Element nodeopcion = (Element) ops.get(j);
+                        opcionesDRAGS += "opcion_"+j+"="+nodeopcion.getChildText("OPCION")+"&";
+                   }
+		   out.println("<td>" +preguntaNode.getChildText("TITULO")+"<td />");
+		   out.println("<td> <a href='LeerPregunta?TEXTO="+preguntaNode.getAttributeValue("TEXTO")+"&"+opcionesDRAGS+"'>LEER PREGUNTA</a> | <a href='#'>MODIFICAR PREGUNTA</a> | <a href='#'>ELIMINAR PREGUNTA</a><td />");    
                    out.println("</tr>");
 		}              
 
