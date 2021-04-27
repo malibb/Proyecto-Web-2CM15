@@ -1,0 +1,68 @@
+<RELACION_DE_COLUMNAS atributo="valor">
+
+    <PREGUNTA TEXTO="Relacione los presidentes mostrados abajo con su respectiva nacion"
+
+              RESPUESTA="OP1-3;OP2-4;OP3-1;OP4-2">
+        <TITULO>
+            PREGUNTA1
+        </TITULO>
+
+        <DRAGS>
+
+            <OPCION IMAGEN="presidente2.jpg"> presidente2.jpg </OPCION>
+
+            <OPCION IMAGEN="presidente4.jpg"> presidente4.jpg </OPCION>
+
+            <OPCION IMAGEN="presidente3.jpg"> presidente3.jpg </OPCION>
+
+            <OPCION IMAGEN="presidente1.jpg"> presidente1.jpg</OPCION>
+
+        </DRAGS>
+
+        <TARGETS>
+
+            <OPCION IMAGEN="nacion3.jpg"> nacion3.jpg </OPCION>
+
+            <OPCION IMAGEN="nacion1.jpg"> nacion1.jpg</OPCION>
+
+            <OPCION IMAGEN="nacion2.jpg"> nacion2.jpg </OPCION>
+
+            <OPCION IMAGEN="nacion4.jpg"> nacion4.jpg </OPCION>
+
+        </TARGETS>
+
+    </PREGUNTA>
+     <PREGUNTA TEXTO="Texto de la segunda pregunta"
+
+              RESPUESTA="OP1-3;OP2-4;OP3-1;OP4-2">
+        <TITULO>
+            PREGUNTA2
+        </TITULO>
+
+        <DRAGS>
+
+            <OPCION IMAGEN="presidente2.jpg"> presidente2.jpg </OPCION>
+
+            <OPCION IMAGEN="presidente4.jpg"> presidente4.jpg </OPCION>
+
+            <OPCION IMAGEN="presidente3.jpg"> presidente3.jpg </OPCION>
+
+            <OPCION IMAGEN="presidente1.jpg"> presidente1.jpg</OPCION>
+
+        </DRAGS>
+
+        <TARGETS>
+
+            <OPCION IMAGEN="nacion3.jpg"> nacion3.jpg </OPCION>
+
+            <OPCION IMAGEN="nacion1.jpg"> nacion1.jpg</OPCION>
+
+            <OPCION IMAGEN="nacion2.jpg"> nacion2.jpg </OPCION>
+
+            <OPCION IMAGEN="nacion4.jpg"> nacion4.jpg </OPCION>
+
+        </TARGETS>
+
+    </PREGUNTA>
+
+</RELACION_DE_COLUMNAS>
