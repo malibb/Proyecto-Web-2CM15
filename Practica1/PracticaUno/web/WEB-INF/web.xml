@@ -8,6 +8,10 @@
         <servlet-name>LeerPregunta</servlet-name>
         <servlet-class>alumno.LeerPregunta</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EliminarPregunta</servlet-name>
+        <servlet-class>alumno.EliminarPregunta</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Proyecto</servlet-name>
         <url-pattern>/Proyecto</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>LeerPregunta</servlet-name>
         <url-pattern>/LeerPregunta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EliminarPregunta</servlet-name>
+        <url-pattern>/EliminarPregunta</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

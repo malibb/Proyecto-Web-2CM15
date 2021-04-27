@@ -71,7 +71,7 @@ public class Proyecto extends HttpServlet {
                    }
                    
 		   out.println("<td>" +preguntaNode.getChildText("TITULO")+"<td />");
-		   out.println("<td> <a href='LeerPregunta?TEXTO="+preguntaNode.getAttributeValue("TEXTO")+"&"+opcionesDRAGS+"&"+opcionesTARGETS+"'>LEER PREGUNTA</a> | <a href='#'>MODIFICAR PREGUNTA</a> | <a href='#'>ELIMINAR PREGUNTA</a><td />");    
+		   out.println("<td> <a href='LeerPregunta?TEXTO="+preguntaNode.getAttributeValue("TEXTO")+"&"+opcionesDRAGS+"&"+opcionesTARGETS+"'>LEER PREGUNTA</a> | <a href='#'>MODIFICAR PREGUNTA</a> | <a href='EliminarPregunta?TEXTO="+preguntaNode.getAttributeValue("TEXTO")+"'>ELIMINAR PREGUNTA</a><td />");    
                    out.println("</tr>");
 		}              
 
