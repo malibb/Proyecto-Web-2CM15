@@ -30,14 +30,19 @@ public class LeerPregunta extends HttpServlet {
         out.println("<title>Datos</title>");
         out.println("</head>");
         out.println("<body>");
-        out.println("<h1>"+texto+"</h1>");
-         String opcion = "";
+        out.println("<h3>"+texto+"</h3>");
+        out.println("<table>");
+         String opcion = "";         
         for(int i = 0; i < 4; i++){
+             out.println("<tr>");
            opcion =  request.getParameter("opcion_"+i);
-           out.println("<h1>"+opcion+"</h1>");
+           out.println("<td>"+opcion+"</td>");
+            opcion =  request.getParameter("target_"+i);
+           out.println("<td>"+opcion+"</td>");
+            out.println("</tr>");
         }
         
-
+        out.println("</table>");
         out.println("</body>");
         out.println("</html>");
     }
