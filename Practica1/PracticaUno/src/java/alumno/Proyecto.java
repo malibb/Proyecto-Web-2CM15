@@ -52,14 +52,26 @@ public class Proyecto extends HttpServlet {
                     out.println("<tr>");
 		   Element preguntaNode = (Element) list.get(i);
                    //Obteniendo el valor de las opciones
-                   List ops = preguntaNode.getChildren("DRAGS");
+                   Element drags = preguntaNode.getChild("DRAGS");
+                   List ops = drags.getChildren("OPCION");
                    String opcionesDRAGS = "";
-                   for(int j = 0; j< ops.size() ; j++){
+                   for(int j = 0; j < ops.size() ; j++){
+                       
                        Element nodeopcion = (Element) ops.get(j);
-                        opcionesDRAGS += "opcion_"+j+"="+nodeopcion.getChildText("OPCION")+"&";
+                       opcionesDRAGS += "opcion_"+j+"="+nodeopcion.getText()+"&";
                    }
+                   //Obteniendo el valor de los targets
+                   Element targets = preguntaNode.getChild("TARGETS");
+                   List ops2 = targets.getChildren("OPCION");
+                   String opcionesTARGETS = "";
+                   for(int a = 0; a < ops2.size() ; a++){
+                       
+                       Element nodetarget = (Element) ops2.get(a);
+                       opcionesTARGETS += "target_"+a+"="+nodetarget.getText()+"&";
+                   }
+                   
 		   out.println("<td>" +preguntaNode.getChildText("TITULO")+"<td />");
-		   out.println("<td> <a href='LeerPregunta?TEXTO="+preguntaNode.getAttributeValue("TEXTO")+"&"+opcionesDRAGS+"'>LEER PREGUNTA</a> | <a href='#'>MODIFICAR PREGUNTA</a> | <a href='#'>ELIMINAR PREGUNTA</a><td />");    
+		   out.println("<td> <a href='LeerPregunta?TEXTO="+preguntaNode.getAttributeValue("TEXTO")+"&"+opcionesDRAGS+"&"+opcionesTARGETS+"'>LEER PREGUNTA</a> | <a href='#'>MODIFICAR PREGUNTA</a> | <a href='EliminarPregunta?TEXTO="+preguntaNode.getAttributeValue("TEXTO")+"'>ELIMINAR PREGUNTA</a><td />");    
                    out.println("</tr>");
 		}              
 
